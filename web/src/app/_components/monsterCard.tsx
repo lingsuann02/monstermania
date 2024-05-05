@@ -41,7 +41,7 @@ export const MonsterCard = ({
         isSelectable
           ? "!cursor-pointer"
           : "!cursor-default bg-transparent hover:bg-transparent border-0",
-        className
+        className,
       )}
     >
       <div className="w-full h-full p-2">

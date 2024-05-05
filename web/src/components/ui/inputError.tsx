@@ -10,7 +10,7 @@ const InputError = React.forwardRef<
       ref={ref}
       className={cn(
         "text-[0.8rem] font-medium text-destructive px-3 pt-1 pb-2",
-        className
+        className,
       )}
       {...props}
     />

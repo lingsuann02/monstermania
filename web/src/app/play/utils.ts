@@ -20,7 +20,7 @@ export const splitLogsPerMonster = ({
       ...acc,
       [monster.id]: logs
         ?.map((log) =>
-          log.state?.find((_monster) => _monster.id === monster.id)
+          log.state?.find((_monster) => _monster.id === monster.id),
         )
         .filter(Boolean),
     };

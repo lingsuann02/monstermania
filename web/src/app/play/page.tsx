@@ -46,7 +46,7 @@ export default function Play() {
   const logsPerMonster = splitLogsPerMonster({ game, logs });
 
   const monsters = game?.monsters?.map((monster) =>
-    getHpPerMonster({ monster, logsPerMonster, settings: game.settings! })
+    getHpPerMonster({ monster, logsPerMonster, settings: game.settings! }),
   );
 
   const gameEnded = monsters?.filter((monster) => monster.hp).length === 1;
@@ -63,7 +63,7 @@ export default function Play() {
           monsters
             .filter((monster) => monster.hp)
             .map((monster) =>
-              getRoundInformation({ monster, settings: game.settings! })
+              getRoundInformation({ monster, settings: game.settings! }),
             ) || [],
         gameId: game.id,
       });

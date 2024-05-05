@@ -26,7 +26,7 @@ export const ScoreDialog = ({ logs }: { logs?: MonsterState[] }) => {
           </p>
           {logs.map((log) => {
             const hpChanged = Math.abs(
-              log.hpLossDueToRound + log.hpLossDueToSnack
+              log.hpLossDueToRound + log.hpLossDueToSnack,
             );
             const hasLostHp = 0 > log.hpLossDueToRound + log.hpLossDueToSnack;
             return (

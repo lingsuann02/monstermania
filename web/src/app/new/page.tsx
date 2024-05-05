@@ -39,13 +39,13 @@ export default function New() {
 
   const onMonsterSelected = (monster: Monster) => {
     const isSelected = selectedMonsters.find(
-      (_selectedMonster) => _selectedMonster.name === monster.name
+      (_selectedMonster) => _selectedMonster.name === monster.name,
     );
     if (isSelected) {
       setSelectedMonsters((_selectedMonsters) =>
         _selectedMonsters.filter(
-          (_selectedMonster) => _selectedMonster.name != monster.name
-        )
+          (_selectedMonster) => _selectedMonster.name != monster.name,
+        ),
       );
       return;
     }
@@ -117,7 +117,7 @@ export default function New() {
           ) : (
             monsters.map((monster) => {
               const isSelected = selectedMonsters.find(
-                (_selectedMonster) => _selectedMonster.name === monster.name
+                (_selectedMonster) => _selectedMonster.name === monster.name,
               );
               return (
                 <MonsterCard

@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={cn(
           "w-full bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <QueryProvider>
