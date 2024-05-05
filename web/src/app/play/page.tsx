@@ -11,8 +11,8 @@ import { MonsterWithHp } from "@/types";
 import { MonstersSkeleton } from "../_components/monstersSkeleton";
 import { MonsterCard } from "../_components/monsterCard";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
-import { ScoreDialog } from "./_components.tsx/scoreDialog";
-import { HpBar } from "./_components.tsx/hpBar";
+import { ScoreDialog } from "./_components/scoreDialog";
+import { HpBar } from "./_components/hpBar";
 import {
   getHpPerMonster,
   getRoundInformation,

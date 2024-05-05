@@ -6,6 +6,10 @@ import {
 } from "@/components/ui/dialog";
 import { MonsterState } from "@/types";
 
+const DateTimeString = ({ dateTime }: { dateTime: Date }) => {
+  return <span className="text-pink-700">{dateTime.toLocaleString()}</span>;
+};
+
 export const ScoreDialog = ({ logs }: { logs?: MonsterState[] }) => {
   if (!logs || !logs?.length) {
     return null;
@@ -20,7 +24,7 @@ export const ScoreDialog = ({ logs }: { logs?: MonsterState[] }) => {
         <DialogTitle>{firstLog.name}</DialogTitle>
         <DialogDescription className="text-left">
           <p>
-            {`${firstLog.createdAt}`}
+            <DateTimeString dateTime={firstLog.createdAt} />
             <br />
             {`${firstLog.name} started the game with ${firstLog.prevHp} HP.`}
           </p>
@@ -31,7 +35,7 @@ export const ScoreDialog = ({ logs }: { logs?: MonsterState[] }) => {
             const hasLostHp = 0 > log.hpLossDueToRound + log.hpLossDueToSnack;
             return (
               <p key={log.id} className="pt-2">
-                {`${log.createdAt.toLocaleString()}`}
+                <DateTimeString dateTime={log.createdAt} />
                 <br />
                 {`${hasLostHp ? "Lost" : "Gained"} ${hpChanged} HP. `}
                 {`New HP is ${log.hp}.`}
@@ -40,7 +44,7 @@ export const ScoreDialog = ({ logs }: { logs?: MonsterState[] }) => {
           })}
           {!lastLog.hp && (
             <p className="pt-2">
-              {`${lastLog.createdAt}`}
+              <DateTimeString dateTime={lastLog.createdAt} />
               <br />
               {`${lastLog.name} fainted!`}
             </p>
