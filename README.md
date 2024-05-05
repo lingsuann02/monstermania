@@ -1,6 +1,7 @@
 # MonsterMania
 
 Monster Mania is the game where you bet on which monster eats the most!
+Check it out yourself at https://monstermania.vercel.app/
 
 ## Requirements
 
