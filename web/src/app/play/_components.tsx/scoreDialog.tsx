@@ -15,7 +15,7 @@ export const ScoreDialog = ({ logs }: { logs?: MonsterState[] }) => {
   const lastLog = logs[logs.length - 1];
 
   return (
-    <DialogContent className="overflow-y-scroll max-h-screen">
+    <DialogContent className="overflow-y-scroll h-4/5">
       <DialogHeader>
         <DialogTitle>{firstLog.name}</DialogTitle>
         <DialogDescription className="text-left">

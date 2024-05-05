@@ -38,7 +38,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <main className="w-full flex flex-col items-center justify-between p-5">
-              <div className="max-w-[900px] w-full p-8 lg:p-12 bg-amber-100 h-full">
+              <div className="max-w-[1100px] w-full p-8 lg:p-12 bg-amber-100 h-full">
                 <Suspense>{children}</Suspense>
               </div>
             </main>

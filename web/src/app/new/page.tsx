@@ -107,7 +107,7 @@ export default function New() {
         </div>
       </div>
 
-      <div className="w-full sm:p-8 bg-amber-100">
+      <div className="w-full sm:p-2 bg-amber-100">
         <h3 className="text-xl sm:text-3xl mb-5 mt-10 sm:text-center">
           Pick up to 5 monsters to compete for survival!
         </h3>
