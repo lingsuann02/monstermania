@@ -26,10 +26,8 @@ export default function Settings() {
 
   const updateGame = usePutGameMutation({
     onSuccess: async (game) => {
-      console.log("usePutGameMutation");
       refetchGame();
       invalidateLogs();
-      console.log("usePutGameMutation2");
       router.push(`/play?game_id=${game.id}`);
     },
   });
@@ -241,18 +239,18 @@ export default function Settings() {
           </div>
         </div>
 
-        <div className="flex justify-between w-full mt-16">
-          <Link className="w-56 mr-5" href="/">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-between w-full mt-16">
+          <Link className="w-56 order-2  sm:order-1" href="/">
             <Button className="w-full text-2xl mb-5 py-6 bg-pink-700">
               Home
             </Button>
           </Link>
           <Button
             type="submit"
-            className="w-56 text-2xl mb-5 py-6 bg-pink-700 cursor-pointer"
+            className="w-56 order-1  sm:order-2 text-2xl mb-5 py-6 bg-pink-700 cursor-pointer"
             isLoading={updateGame.isPending || deleteLog.isPending}
           >
-            Next
+            Play!
           </Button>
         </div>
       </form>

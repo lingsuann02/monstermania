@@ -11,10 +11,14 @@ export default function Home() {
       </div>
       <div className="flex flex-col w-full">
         <Link passHref className="mx-auto" href="/new">
-          <Button className="text-2xl mb-5 py-6 w-56">New Game</Button>
+          <Button className="text-2xl mb-5 py-6 w-56 bg-pink-700">
+            New Game
+          </Button>
         </Link>
         <Link passHref className="mx-auto" href="/games">
-          <Button className="text-2xl mb-5 py-6 w-56">Load Game</Button>
+          <Button className="text-2xl mb-5 py-6 w-56 bg-pink-700">
+            Load Game
+          </Button>
         </Link>
       </div>
     </>

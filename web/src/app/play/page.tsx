@@ -44,12 +44,14 @@ export default function Play() {
   });
 
   const logsPerMonster = splitLogsPerMonster({ game, logs });
-  console.log(logsPerMonster);
+
   const monsters = game?.monsters?.map((monster) =>
     getHpPerMonster({ monster, logsPerMonster, settings: game.settings! })
   );
 
   const gameEnded = monsters?.filter((monster) => monster.hp).length === 1;
+
+  const monstersInPlay = monsters?.filter((monster) => monster.hp);
 
   const feed = () => {
     if (gameEnded) {
@@ -83,17 +85,20 @@ export default function Play() {
         </h2>
       </div>
 
-      <div className="flex flex-col items-center sm:flex-row sm:justify-between sm:justify-items-center pb-8">
+      <div className="flex flex-col items-center sm:flex-row sm:justify-between sm:justify-items-center py-8">
         <Button
           disabled={gameEnded}
-          className="w-56 text-2xl bg-pink-700"
+          className="w-56 text-2xl bg-pink-700 mb-4 sm:mb-0"
           onClick={feed}
         >
           Feed
         </Button>
         {currentRound ? (
           <span className="text-xl sm:text-2xl font-bold">
-            Round {currentRound}
+            {!gameEnded && `Round ${currentRound}`}
+            {gameEnded && monstersInPlay?.length
+              ? `${monstersInPlay[0].name} has won!`
+              : "All monsters fainted!"}
           </span>
         ) : null}
       </div>
@@ -125,10 +130,13 @@ export default function Play() {
       </div>
 
       <div className="flex flex-col items-center sm:flex-row sm:justify-between w-full mt-16">
-        <Link href="/" className="sm:mr-5">
+        <Link href="/" className="order-2 sm:order-1">
           <Button className="w-56 text-2xl mb-5 py-6 bg-pink-700">Home</Button>
         </Link>
-        <Link href={`/settings?game_id=${game?.id}`}>
+        <Link
+          href={`/settings?game_id=${game?.id}`}
+          className="order-1  sm:order-2"
+        >
           <Button className="w-56 text-2xl mb-5 py-6 bg-pink-700 cursor-pointer">
             Settings
           </Button>

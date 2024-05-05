@@ -133,13 +133,13 @@ export default function New() {
         </div>
       </div>
       <div className="flex flex-col items-center sm:flex-row sm:justify-between w-full mt-16">
-        <Link passHref href="/">
+        <Link passHref className="order-2  sm:order-1" href="/">
           <Button className="w-56 text-2xl mb-5 py-6 bg-pink-700">Home</Button>
         </Link>
         <Button
           onClick={createOrUpdateGame}
           disabled={selectedMonsters.length < 2}
-          className="w-56 text-2xl mb-5 py-6 bg-pink-700"
+          className="order-1  sm:order-2 w-56 text-2xl mb-5 py-6 bg-pink-700"
         >
           Next
         </Button>
