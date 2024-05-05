@@ -5,19 +5,13 @@
 ### Rules
 
 - Each player is allocated a monster
-  - each monster has 5 HP
+  - each monster has 25 HP
 - Each round, each monster loses 1 HP
 - Each round, each monster is fed a snack
-  - each snack has a 80% chance of providing 1 or 2 HP or do nothing at all
-  - some snacks are poisoned and have a 20% of removing 1 or 2 HP or do nothing at all
+  - each snack has provides 1 or 2 HP or do nothing at all
+  - but some snacks are poisoned and have a 20% of removing HP instead
 - A monster is KO-ed when it runs out of HP
 - The game ends when only one monster is alive, the remaining monster's player is the winner
-
-### Variations
-
-- Monster design can be modified
-- Snacks can be modified
-- Poison percentage can be modified
 
 ### Game features
 
@@ -27,10 +21,12 @@
 
 ## Local development
 
-### Requirements
+### Instructions
+
+In the root folder of this repository, run the following to setup the Monster Mania api locally.
 
 ```bash
-brew install pyenv
+brew install pyenv postgresql
 pyenv install 3.11.6
 pyenv local 3.11.6
 source venv/bin/activate
@@ -38,4 +34,19 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
+```
+
+To run the web server, run the following:
+
+```bash
+cd web
+npm i
+npm run dev
+```
+
+There are a few FE unit tests covering critical paths, to run those:
+
+```bash
+cd web
+npm run test
 ```

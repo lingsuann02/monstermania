@@ -89,7 +89,7 @@ export default function New() {
     <>
       <div className="flex flex-col sm:items-center px-4">
         <h2 className="text-3xl sm:text-5xl font-medium mb-5">
-          Let's play Monster Mania!
+          Let&apos;s play Monster Mania!
         </h2>
         <div className="flex my-5 flex-col sm:flex-row">
           <Label htmlFor="name" className="text-xl sm:text-2xl">

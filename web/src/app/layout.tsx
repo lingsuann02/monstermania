@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { IBM_Plex_Mono as FontSans } from "next/font/google";
@@ -39,7 +39,7 @@ export default function RootLayout({
           >
             <main className="w-full flex flex-col items-center justify-between p-5">
               <div className="max-w-[900px] w-full p-8 lg:p-12 bg-amber-100 h-full">
-                {children}
+                <Suspense>{children}</Suspense>
               </div>
             </main>
           </ThemeProvider>
