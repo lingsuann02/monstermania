@@ -1,5 +1,7 @@
 # MonsterMania
 
+Monster Mania is the game where you bet on which monster eats the most!
+
 ## Requirements
 
 ### Rules
@@ -50,3 +52,13 @@ There are a few FE unit tests covering critical paths, to run those:
 cd web
 npm run test
 ```
+
+### Screenshots
+
+<img width="1624" alt="mm_splash" src="https://github.com/lingsuann02/monstermania/assets/31858814/5789cda0-a1b1-4781-83c5-4fd7f45b5ca7">
+<img width="1624" alt="mm_new" src="https://github.com/lingsuann02/monstermania/assets/31858814/08b88eb2-0226-47de-89ff-55d67467f43e">
+<img width="1624" alt="mm_settings" src="https://github.com/lingsuann02/monstermania/assets/31858814/9de7d417-bb38-4766-ad7f-bc50f2ec8b57">
+<img width="1624" alt="mm_winner" src="https://github.com/lingsuann02/monstermania/assets/31858814/b1cdf640-44e2-437f-9579-5c9ea33e0b50">
+
+
+
