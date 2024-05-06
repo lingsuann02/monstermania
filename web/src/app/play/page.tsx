@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 
 export default function Play() {
   const searchParams = useSearchParams();
+  // Todo: can be avoided by counting the number of logs
   const [currentRound, setCurrentRound] = useState(0);
   const gameId = searchParams.get("game_id") as UUID;
   const { fetch: fetchGame } = useGetGameQuery(gameId);
