@@ -2,6 +2,7 @@
 
 Monster Mania is the game where you bet on which monster eats the most!
 Check it out yourself at https://monstermania.vercel.app/
+The server may have to cold start when you access this website, so server responses may be initially slow.
 
 ## Requirements
 
@@ -60,6 +61,4 @@ npm run test
 <img width="1624" alt="mm_new" src="https://github.com/lingsuann02/monstermania/assets/31858814/08b88eb2-0226-47de-89ff-55d67467f43e">
 <img width="1624" alt="mm_settings" src="https://github.com/lingsuann02/monstermania/assets/31858814/9de7d417-bb38-4766-ad7f-bc50f2ec8b57">
 <img width="1624" alt="mm_winner" src="https://github.com/lingsuann02/monstermania/assets/31858814/b1cdf640-44e2-437f-9579-5c9ea33e0b50">
-
-
-
+<img width="1624" alt="Screenshot 2024-05-06 at 14 55 36" src="https://github.com/lingsuann02/monstermania/assets/31858814/86cd0fb7-611c-49c2-ab7a-44718068d2c8">
