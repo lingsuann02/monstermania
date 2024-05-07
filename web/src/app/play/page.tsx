@@ -40,7 +40,7 @@ export default function Play() {
 
   const postLogMutation = usePostLogMutation({
     onSuccess: () => {
-      refetchLogs();
+      return refetchLogs();
     },
   });
 
@@ -90,6 +90,7 @@ export default function Play() {
         <Button
           disabled={gameEnded}
           className="w-56 text-2xl bg-pink-700 mb-4 sm:mb-0"
+          isLoading={postLogMutation.isPending}
           onClick={feed}
         >
           Feed
