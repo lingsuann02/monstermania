@@ -97,9 +97,12 @@ export default function Play() {
         {currentRound ? (
           <span className="text-xl sm:text-2xl font-bold">
             {!gameEnded && `Round ${currentRound}`}
-            {gameEnded && monstersInPlay?.length
-              ? `${monstersInPlay[0].name} has won!`
-              : "All monsters fainted!"}
+            {gameEnded &&
+              monstersInPlay?.length == 1 &&
+              `${monstersInPlay[0].name} has won!`}
+            {gameEnded &&
+              monstersInPlay?.length == 0 &&
+              "All monsters fainted!"}
           </span>
         ) : null}
       </div>
